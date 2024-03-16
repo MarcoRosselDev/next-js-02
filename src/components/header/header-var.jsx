@@ -1,7 +1,13 @@
+import { useContext } from 'react';
 import './header.css'
 import { SiBlueprint } from "react-icons/si";
 
+
 function HeaderVar() {
+
+  const theme = useContext(ThemeContext)
+  console.log(theme, 'from header');
+
   return (
     <>
       <header>
