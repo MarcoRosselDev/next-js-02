@@ -1,3 +1,5 @@
+import './header.css'
+
 function HeaderVar() {
   return (
     <>

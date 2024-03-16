@@ -1,12 +1,15 @@
 import './App.css'
-import HeaderVar from './components/header-var'
+import HeaderVar from './components/header/header-var'
+import Main from './components/main/main-component'
+import Footer from './components/footer/footer-component'
 
 function App() {
   return (
     <>
       <HeaderVar />
-      <h3>New Marco's potfollio</h3>
-      <p>marco rossel Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem unde eaque dolore rem libero enim repudiandae deleniti dolorum quisquam ex at impedit non architecto aperiam voluptatum autem qui, laudantium esse!</p>
+      <Main />
+
+      <Footer />
     </>
   )
 }
