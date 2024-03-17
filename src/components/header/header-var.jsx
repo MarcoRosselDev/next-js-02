@@ -1,12 +1,11 @@
 import { useContext } from 'react';
 import './header.css'
 import { SiBlueprint } from "react-icons/si";
-
+import counterContext from '../../context/counterContext';
 
 function HeaderVar() {
-
-  const theme = useContext(ThemeContext)
-  console.log(theme, 'from header');
+  
+  const {counter, plusCount, lestCount} = useContext(counterContext)
 
   return (
     <>
@@ -14,9 +13,10 @@ function HeaderVar() {
         <div className='icon-header'>
           <SiBlueprint />
         </div>
-        <h3>proyectos</h3>
-        <h3>cv</h3>
+        <h3 onClick={() => plusCount()}>proyectos</h3>
+        <h3 onClick={() => lestCount()} >cv</h3>
         <h3>modo claro</h3>
+        <p>{counter}</p>
       </header>
     </>
   )
