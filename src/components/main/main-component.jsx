@@ -5,6 +5,7 @@ import counterContext from '../../context/counterContext';
 function Main(params) {
 
   const {counter} = useContext(counterContext)
+  
 
   return (
     <main>

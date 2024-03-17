@@ -3,6 +3,11 @@ import counterContext from "./counterContext";
 
 const StateCompo = ({children}) => {
   const [counter, setCounter] = useState(0)
+  const [dark, setDark] = useState(true)
+
+  function darkMode() {
+    setDark(prev => !prev)
+  }
 
   function plusCount() {
     setCounter(prev => prev + 1)
@@ -14,7 +19,9 @@ const StateCompo = ({children}) => {
   return (
     <counterContext.Provider 
       value={{
-        counter, 
+        dark,
+        darkMode,
+        counter,
         plusCount, 
         lestCount}}>
       {children}

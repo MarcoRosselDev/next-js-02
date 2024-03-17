@@ -1,16 +1,12 @@
 import './App.css'
-import HeaderVar from './components/header/header-var'
-import Main from './components/main/main-component'
-import Footer from './components/footer/footer-component'
 import StateCompo from './context/StateCompo'
+import MyComponent from './components/myComponent'
 
 function App() {
 
   return (
-    <StateCompo>
-      <HeaderVar />
-      <Main />
-      <Footer />
+    <StateCompo >
+      <MyComponent />
     </StateCompo>
   )
 }
