@@ -2,18 +2,15 @@ import { useState } from "react";
 import counterContext from "./counterContext";
 
 const StateCompo = ({children}) => {
-  const [counter, setCounter] = useState(0)
   const [dark, setDark] = useState(true)
+  const [main, setMain] = useState('proyectos')
 
   function darkMode() {
     setDark(prev => !prev)
   }
 
-  function plusCount() {
-    setCounter(prev => prev + 1)
-  }
-  function lestCount() {
-    setCounter(prev => prev - 1)
+  function setMainF(prop) {
+    setMain(prop)
   }
 
   return (
@@ -21,9 +18,9 @@ const StateCompo = ({children}) => {
       value={{
         dark,
         darkMode,
-        counter,
-        plusCount, 
-        lestCount}}>
+        main,
+        setMainF,
+        }}>
       {children}
     </counterContext.Provider>
   )

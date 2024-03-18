@@ -1,15 +1,16 @@
 import { useContext } from 'react';
 import './main.css'
 import counterContext from '../../context/counterContext';
+import CV from './cv/CV'
+import Proyectos from './proyectos/Proyectos'
 
-function Main(params) {
+function Main() {
 
-  const {counter} = useContext(counterContext)
-  
+  const {main} = useContext(counterContext)
 
   return (
     <main>
-      <h1>counter: {counter}</h1>
+      {main === 'proyectos'?  <Proyectos /> : <CV />}
     </main>
   )
 }

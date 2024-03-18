@@ -9,7 +9,7 @@ function MyComponent() {
   const {dark} = useContext(counterContext)
 
   return (
-    <div className={`${dark? 'body-dark': 'body-light'}`}>
+    <div className={`${dark? 'body-dark': 'body-light'} main-div`}>
       <HeaderVar />
       <Main />
       <Footer />

@@ -5,7 +5,7 @@ import counterContext from '../../context/counterContext';
 
 function HeaderVar() {
   
-  const {counter, plusCount, lestCount, dark, darkMode,} = useContext(counterContext)
+  const {dark, darkMode, setMainF} = useContext(counterContext)
 
   return (
     <>
@@ -13,10 +13,10 @@ function HeaderVar() {
         <div className='icon-header'>
           <SiBlueprint />
         </div>
-        <h3 onClick={() => plusCount()}>proyectos</h3>
-        <h3 onClick={() => lestCount()} >cv</h3>
+        <h3 onClick={() => setMainF('proyectos')}>proyectos</h3>
+        <h3 onClick={() => setMainF('CV')} >cv</h3>
         <h3 onClick={() => darkMode()}>{dark? 'modo claro' : 'modo oscuro'}</h3>
-        <p>{counter}</p>
+        <h3>idioma</h3>
       </header>
     </>
   )
