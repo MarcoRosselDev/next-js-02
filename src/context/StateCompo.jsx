@@ -4,6 +4,7 @@ import counterContext from "./counterContext";
 const StateCompo = ({children}) => {
   const [dark, setDark] = useState(true)
   const [main, setMain] = useState('proyectos')
+  const [idioma, setIdioma] = useState('spanish')
 
   function darkMode() {
     setDark(prev => !prev)
@@ -20,6 +21,8 @@ const StateCompo = ({children}) => {
         darkMode,
         main,
         setMainF,
+        idioma,
+        setIdioma
         }}>
       {children}
     </counterContext.Provider>

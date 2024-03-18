@@ -8,3 +8,40 @@ header{
   width: 100%;
   max-width: 900px;
 }
+
+.div-idiomas{
+  position: relative;
+}
+
+.h3-items{
+  position: absolute;
+  top: 0;
+  padding: 40px 0 0 0;
+  width: 90px;
+  left: -20px;
+  border: 1px solid purple;
+  border-radius: 0 0 5px 5px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.h3-idioma{
+  border: 1px solid lightblue;
+/*   padding: 5px; */
+  width: 100%;
+}
+
+.h3-idioma:hover{
+  background-color: lightslategray;
+}
+
+.h3-idioma-light:hover{
+  background-color: rgba(182, 182, 182, 0.738);
+}
+
+.hidden{
+  display: none;
+}
