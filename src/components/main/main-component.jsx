@@ -3,7 +3,7 @@ import './main.css'
 import counterContext from '../../context/counterContext';
 import CV from './cv/CV'
 import Proyectos from './proyectos/Proyectos'
-import CanvasComponent from '../box/CanvasComponent';
+import CanvasComponent from './box/CanvasComponent';
 
 function Main() {
 
@@ -11,8 +11,9 @@ function Main() {
 
   return (
     <main>
-      {/* {main === 'proyectos'?  <Proyectos /> : <CV />} */}
+      <div className='main-div-canvas'>
       {main === 'proyectos'?  <Proyectos /> : <CanvasComponent />}
+      </div>
     </main>
   )
 }

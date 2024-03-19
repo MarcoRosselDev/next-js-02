@@ -1,7 +1,7 @@
-main{
+.main-div-canvas{
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 600px;
-  max-width: 900px;
+  height: 400px;
+  width: 400px;
 }
