@@ -45,3 +45,20 @@ header{
 .hidden{
   display: none;
 }
+
+.icon-header{
+  display: flex;
+  gap: 10px;
+}
+
+.dark-light-mode{
+  border: 1px solid pink;
+  padding: 0 10px 0 10px;
+  border-radius: 5px;
+}
+.dark-light-mode:hover{
+  background-color: rgba(182, 182, 182, 0.738);
+}
+.idioma-mode{
+  gap: 20px;
+}

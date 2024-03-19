@@ -14,17 +14,22 @@ function HeaderVar() {
     <>
       <header>
         <div className='icon-header'>
+          <p>Marco Rossel</p>
           <SiBlueprint />
         </div>
         <h3 onClick={() => setMainF('proyectos')}>{idioma === 'spanish'? 'proyectos': 'proyects'}</h3>
         <h3 onClick={() => setMainF('CV')} >cv</h3>
-        <h3 onClick={() => darkMode()}>{dark? <CiLight /> : <CiDark />}</h3>
+        <div className='icon-header idioma-mode'>
+          <div className='dark-light-mode'>
+            <h3 onClick={() => darkMode()}>{dark? <CiLight /> : <CiDark />}</h3>
+          </div>
         <div className='div-idiomas' onMouseOver={() => setToggle(true)} onMouseOut={() => setToggle(false)}>
           <h3>{idioma === 'spanish'? 'idioma': 'language'}</h3>
           <div className={`h3-items ${toggle? '': 'hidden'}`}>
             <h3 className={`${dark? 'h3-idioma' : 'h3-idioma-light'}`} onClick={() => setIdioma('spanish')} >{idioma === 'spanish'? 'Español': 'Spanish'}</h3>
             <h3 className={`${dark? 'h3-idioma' : 'h3-idioma-light'}`} onClick={() => setIdioma('english')} >{idioma === 'spanish'? 'Ingles': 'English'}</h3>
           </div>
+        </div>
         </div>
       </header>
     </>
