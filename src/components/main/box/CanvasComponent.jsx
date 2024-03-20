@@ -1,6 +1,7 @@
 import Box from "./Box"
 import { Canvas } from "@react-three/fiber"
 import './canvas-css.css'
+//import Mono from "../mono/Mono"
 
 function CanvasComponent() {
   return (
