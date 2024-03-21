@@ -3,10 +3,12 @@ import { useLoader } from '@react-three/fiber'
 import { useFrame } from '@react-three/fiber'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { useRef } from 'react'
+import { useGLTF } from "@react-three/drei";
 
 function Mono(props) {
   const meshRef = useRef()
-  const obj = useLoader(OBJLoader, '/prueba.obj')
+/*   const obj = useLoader(OBJLoader, '/prueba.obj') */
+  const { nodes, materials } = useGLTF("/prueba1.glb");
   //return <primitive object={obj}/>
   useFrame((state, delta) => (meshRef.current.rotation.x += delta))
   const [colorMap, displacementMap, normalMap, roughnessMap, aoMap] = useLoader(TextureLoader, [
@@ -21,16 +23,22 @@ function Mono(props) {
       {...props}
       ref={meshRef}>
       <boxGeometry args={[1,1,1]} />
-      <primitive object={obj} args={[1,1,1]} />
-      <meshStandardMaterial
-          color='hotpink'/* 
-          displacementScale={0.2}
+{/*       <primitive object={obj} args={[1,1,1]} /> */}
+      {/* <meshStandardMaterial
+          color='hotpink'
+          displacementScale={0}
           map={colorMap}
           displacementMap={displacementMap}
           normalMap={normalMap}
           roughnessMap={roughnessMap}
-          aoMap={aoMap} */
-        />
+          aoMap={aoMap}
+        /> */}
+        <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.a}
+        material={materials["Material.001"]}
+      />
     </mesh>
   )
   
