@@ -8,8 +8,9 @@ import { useGLTF } from "@react-three/drei";
 function Mono(props) {
   const meshRef = useRef()
 /*   const obj = useLoader(OBJLoader, '/prueba.obj') */
-  const { nodes, materials } = useGLTF("/prueba1.glb");
-  //console.log(nodes);
+  const { nodes, materials } = useGLTF("/proto.glb");
+  console.log(nodes);
+  console.log(materials);
   //return <primitive object={obj}/>
   //useFrame((state, delta) => (meshRef.current.rotation.x += delta))
   /* const [colorMap, displacementMap, normalMap, roughnessMap, aoMap] = useLoader(TextureLoader, [
@@ -33,12 +34,21 @@ function Mono(props) {
           roughnessMap={roughnessMap}
           aoMap={aoMap}
         /> */}
+        <mesh>
+
         <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Suzanne.geometry}
-        material={materials["Material.001"]}
-      />
+        geometry={nodes.Cube.geometry}
+        material={materials["Material.004"]}
+        />
+        {/* <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Cube001.geometry}
+        material={materials["Material.003"]}
+        /> */}
+        </mesh>
     </mesh>
   )
   
