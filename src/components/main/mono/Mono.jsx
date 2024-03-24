@@ -49,6 +49,7 @@ function Mono(props) {
         material={materials["Material.003"]}
         /> */}
         </mesh>
+        {/* working in 3d model for today */}
     </mesh>
   )
   
