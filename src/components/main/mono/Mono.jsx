@@ -9,8 +9,8 @@ function Mono(props) {
   const meshRef = useRef()
 /*   const obj = useLoader(OBJLoader, '/prueba.obj') */
   const { nodes, materials } = useGLTF("/proto.glb");
-  console.log(nodes);
-  console.log(materials);
+  //console.log(nodes);
+  //console.log(materials);
   //return <primitive object={obj}/>
   //useFrame((state, delta) => (meshRef.current.rotation.x += delta))
   /* const [colorMap, displacementMap, normalMap, roughnessMap, aoMap] = useLoader(TextureLoader, [
@@ -52,6 +52,10 @@ function Mono(props) {
         {/* working in 3d model for today */}
     </mesh>
   )
+  // bamos a tratar de crear un disegno en blender por ahora
+  // la idea es crear un proyecto arquitectonico simple
+  // pero que tengo como minimo 3 tipos diferentes de materiales
+  // a la vez utlilisaremos GSAP para las animaciones en 2D
   
 }
 
