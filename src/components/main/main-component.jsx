@@ -12,7 +12,7 @@ function Main() {
   return (
     <main>
       <div className='main-div-canvas'>
-      {main === 'proyectos'?  <CanvasComponent />:<Proyectos />}
+        {main === 'proyectos'?  <CanvasComponent />:<Proyectos />}
       </div>
     </main>
   )
